@@ -22,11 +22,13 @@
 </head>
 <body class="font-sarabun bg-brand-50 text-slate-800 leading-relaxed">
   <!-- ส่วนหัว -->
-  <header class="bg-brand-700 text-white text-center px-4 py-10">
+    <header class="bg-brand-700 text-white text-center px-4 py-10">
     <img src="images/logo.png" alt="โลโก้ร้าน Hungry Bowl" class="w-30 h-30 mx-auto object-cover rounded-full border-4 border-white">
     <h1 class="text-3xl font-bold mt-4">Hungry Bowl</h1>
     <p class="text-brand-100">อาหารตามสั่งรสมือแม่ หน้าโรงเรียน</p>
+    <p id="greeting" class="mt-3 inline-block bg-white/15 px-4 py-1">หิวข้าวเที่ยงแล้วใช่มั้ย</p>
   </header>
+
 
   <main class="max-w-3xl mx-auto px-4 py-6 space-y-4">
     <!-- เกี่ยวกับร้าน -->
@@ -42,11 +44,13 @@
     <section class="bg-white border border-brand-200 px-6 py-4">
       <h2 class="text-xl font-bold text-brand-700 mb-4">เมนูแนะนำ</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <article class="bg-white border border-brand-200 p-3 text-center">
+               <article class="bg-white border border-brand-200 p-3 text-center">
           <img src="images/kaprao.png" alt="ข้าวกะเพราไข่ดาว" class="w-full aspect-square object-cover">
           <h3 class="font-bold mt-2">ข้าวกะเพราไข่ดาว</h3>
           <p class="text-brand-700">60 บาท</p>
+          <button type="button" class="add-btn mt-3 w-full bg-brand-600 text-white py-2 hover:bg-brand-700 cursor-pointer" data-name="ข้าวกะเพราไข่ดาว" data-price="60">เพิ่มลงตะกร้า</button>
         </article>
+
         <article class="bg-white border border-brand-200 p-3 text-center">
           <img src="images/padthai.png" alt="ผัดไทยกุ้งสด" class="w-full aspect-square object-cover">
           <h3 class="font-bold mt-2">ผัดไทยกุ้งสด</h3>
@@ -59,7 +63,20 @@
         </article>
       </div>
     </section>
+    </section>
 
+    <!-- ตะกร้า -->
+    <section id="cart" class="bg-white border border-brand-200 px-6 py-4">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="images/cart.png" alt="" class="w-14 h-14">
+        <h2 class="text-xl font-bold text-brand-700">ตะกร้าของฉัน <span id="cart-count" class="text-base font-normal text-slate-500">0 รายการ</span></h2>
+      </div>
+      <p id="cart-empty" class="text-slate-500">ยังไม่มีเมนูในตะกร้า</p>
+      <ul id="cart-list" class="space-y-2"></ul>
+      <p class="mt-3 text-right text-lg font-bold">รวม <span id="cart-total">0</span> บาท</p>
+    </section>
+
+    
     <!-- เวลาเปิดร้าน -->
     <section class="bg-white border border-brand-200 px-6 py-4">
       <h2 class="text-xl font-bold text-brand-700 mb-2">เวลาเปิดร้าน</h2>
@@ -72,8 +89,10 @@
   </main>
 
   <!-- ส่วนท้าย -->
-  <footer class="text-center text-slate-500 p-4">
+    <footer class="text-center text-slate-500 p-4">
     <p>ร้านสมมติ สร้างด้วย HTML และ Tailwind CSS ในวิชา ว30259 ภาพอาหารเป็นภาพการ์ตูน</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
+
